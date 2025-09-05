@@ -4,7 +4,6 @@ package org.unc.comp301;
 public class Main {
     public static void main(String[] args) {
         IPowerGenerator generator = new SolarGenerator();
-        // To swap use: IPowerGenerator generator = new FuelGenerator(50);
 
         Thruster thruster = new Thruster();
         double[] experimentParams = {1.2, 3.4, 5.6};
