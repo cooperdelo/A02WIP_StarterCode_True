@@ -1,4 +1,5 @@
 # A02 - Mothership Mayhem
+![iss056e201248~large](https://github.com/user-attachments/assets/66cc6b28-eb04-4e6f-b82f-5b7070028cce)
 
 Welcome aboard captain! Your team at UNC Deep Space Systems wants to build 
 a modular mothership capable of swapping power sources on the fly, firing thrusters, and
