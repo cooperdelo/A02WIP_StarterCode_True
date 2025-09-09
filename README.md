@@ -193,18 +193,3 @@ For your implementation to be concidered for extra creidt it must do the followi
 3. Be fun and unique. Our hope for this is that you make this porject your own and try somthing your interested in
 
 For this part, show your new module to a TA for extra credit!
-
-
----
-
-Congratulations captain! You just completed building your command ship! You can now successfully demonstrated use of dependency 
-injection, polymorphism, inhertance, and ecapsulation. 
-
-
-In your main method:
-- create a power generator of either type.
-- create a thruster object.
-- create an experiment module with the necessary arguments.
-- create a mothership and inject your objects.
-- request power for your mothership, thrust forward, and run an experiment.
-- finally, print your ship's status report!
