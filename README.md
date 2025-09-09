@@ -182,7 +182,23 @@ public Mothership(IPowerGenerator powerGenerator, Thruster thruster, ExperimentM
 3. `void runExperiment()` - delegate to your experiment module
 4. `void printStatusReports()` - iterate modules and call StatusReport("Normal", true, moduleName)
 
+## Extra Credit
 Now, it's time to get creative!
+
+Now that you have showed sucessful mastery of inheritance, polymorthism, encapulation, and dependcy injection you have the option of earning some extra points.
+For your implementation to be concidered for extra creidt it must do the following things.
+1. Be passed into `Mothership.java`
+2. Inherit from the `ShipModule` Abstract class
+3. Be fun and unique. Our hope for this is that you make this porject your own and try somthing your interested in
+
+For this part, show your new module to a TA for extra credit!
+
+
+---
+
+Congratulations captain! You just completed building your command ship! You can now successfully demonstrated use of dependency 
+injection, polymorphism, inhertance, and ecapsulation. 
+
 
 In your main method:
 - create a power generator of either type.
@@ -191,10 +207,3 @@ In your main method:
 - create a mothership and inject your objects.
 - request power for your mothership, thrust forward, and run an experiment.
 - finally, print your ship's status report!
-
-For this part, show you final status report to a TA for extra credit!
-
----
-
-Congratulations captain! You just completed building your command ship! You can now successfully demonstrated use of constructor 
-injection, polymorphism and ecapsulation. 
