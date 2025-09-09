@@ -1,4 +1,4 @@
-# A02 - Asteroid Deflector
+# A02 - Mothership Mayhem
 
 Welcome aboard captain! Your team at UNC Deep Space Systems wants to build 
 a modular mothership capable of swapping power sources on the fly, firing thrusters, and
