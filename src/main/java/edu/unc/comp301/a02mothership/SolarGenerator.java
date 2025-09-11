@@ -1,4 +1,4 @@
-package org.unc.comp301;
+package edu.unc.comp301.a02mothership;
 
 public class SolarGenerator extends ShipModule implements IPowerGenerator{
 

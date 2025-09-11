@@ -7,7 +7,46 @@ running science experiment. You'll build tiny modules that communicate cleanly w
 encapsulation. You'll use dependency injection to refuel or change your power source mid-mission
 without touching mothership code! 🚀
 
+# How the Classes Work Together
+
+```text
+├── IPowerGenerator.java   # Interface for any power generator
+  ├── SolarGenerator.java    # Solar-powered implementation of IPowerGenerator
+  ├── FuelGenerator.java     # Fuel-powered implementation of IPowerGenerator
+├── ShipModule.java        # Abstract base class for all modules
+  ├── Thruster.java          # Consumes power to provide thrust
+  ├── ExperimentModule.java  # Runs and reports science experiments
+├── Mothership.java        # Orchestrates modules (power, thruster, experiments)
+└── Main.java              # Entry point; wires everything together and runs the mission
+```
+
+
+The **Mothership** coordinates a collection of **ShipModule**s—most notably a **Thruster**, an **ExperimentModule**, and one injected **IPowerGenerator**. The power generator can be either a **SolarGenerator** or a **FuelGenerator**, both of which *implement* the `IPowerGenerator` interface so the mothership can call `GeneratePower()` without caring how the power is produced. This generator is provided to the mothership via **dependency injection**, which means you can choose which one to use at runtime by handing the mothership a different generator instance—no changes to mothership code required.
+
+The mothership is composed of its thruster and experiment modules and may maintain a list of all `ShipModule` objects to broadcast `StatusReport(...)` calls for consistent health reporting. The **Main** class acts as the mission script: it wires everything together, injects the chosen power generator, and triggers high-level actions such as `requestPower()`, `fireThruster(...)`, `runExperiment()`, and reporting routines.
+
+
+
+## Inheritance and Interfaces
+
+- **ShipModule** is an **abstract** base class. It defines shared behavior (e.g., a standardized `StatusReport(...)`) that all concrete modules inherit, but it should not be instantiated by itself—there’s no such thing as a generic, fully functional module. Marking it *abstract* prevents accidental construction of incomplete objects and communicates design intent.
+- **IPowerGenerator** is an **interface** that specifies *what* a power source must do (e.g., `GeneratePower()`), without specifying *how*. Concrete classes like **SolarGenerator** and **FuelGenerator** implement this interface with their own strategies.
+
+## Why Mark a Class Abstract?
+
+Use an abstract class when:
+1. You want to **share code and a common API** among related subclasses (e.g., one consistent `StatusReport(...)`), and
+2. It **doesn’t make sense** to create a base instance on its own (a generic ShipModule isn’t operational).
+
+This keeps your codebase safe (no half-baked base objects), clear (intent is explicit), and DRY (common logic lives in one place).
+
+## Dependency Injection (DI) in Practice
+
+The mothership does **not** instantiate its power generator directly. Instead, the chosen generator (e.g., `new SolarGenerator()` or `new FuelGenerator(fuel)`) is **injected** into the mothership, either through the constructor (constructor injection) or through a setter method (setter injection). By allowing the class to take in an interface type, it decouples the mothership from any one power source, enabling a flexible solution with whatever module is available.  It also makes it easier for testing (mock generators), and cleaner upgrades without changing mothership code.
+
+
 ---
+
 
 ## Novice
 

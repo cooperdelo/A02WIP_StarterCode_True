@@ -1,4 +1,4 @@
-package org.unc.comp301;
+package edu.unc.comp301.a02mothership;
 
 public class ExperimentModule extends ShipModule {
     // Define all of the experimentName, parameters, result, and hasRun: make sure nobody can acess them if they are not supposed to
@@ -8,15 +8,16 @@ public class ExperimentModule extends ShipModule {
     }
 
     public void RunExperiment() {
-        result = 0;
-        for (double p : parameters) {
-            result += p * Math.random();
-        }
-        hasRun = true;
+//        result = 0;
+//        for (double p : parameters) {
+//            result += p * Math.random();
+//        }
+//        hasRun = true;
     }
 
     public String GetSummary() {
         // Return the summary
+        return null;
     }
 
     // Write the StatusReport methoid
