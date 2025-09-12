@@ -1,24 +1,5 @@
 package edu.unc.comp301.a02mothership;
 
-public class ExperimentModule extends ShipModule {
-    // Define all of the experimentName, parameters, result, and hasRun: make sure nobody can acess them if they are not supposed to
+public class ExperimentModule {
 
-    public ExperimentModule(String experimentName, double[] parameters) {
-        // set up contructor (hint remeber Arrays are last via reference)
-    }
-
-    public void RunExperiment() {
-//        result = 0;
-//        for (double p : parameters) {
-//            result += p * Math.random();
-//        }
-//        hasRun = true;
-    }
-
-    public String GetSummary() {
-        // Return the summary
-        return null;
-    }
-
-    // Write the StatusReport methoid
 }

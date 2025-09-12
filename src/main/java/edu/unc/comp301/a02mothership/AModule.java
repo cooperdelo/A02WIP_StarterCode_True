@@ -1,7 +1,6 @@
 package edu.unc.comp301.a02mothership;
 
-public class FuelGenerator  {
-
-
-
+public abstract class AModule {
 }
+
+
