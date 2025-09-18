@@ -15,7 +15,7 @@ public abstract class AModule implements IModule{
         System.out.println(this.name + " is " + moduleStatus + "...");
 
         if (isSuccessful){
-            System.out.println("Action Successful");
+            System.out.println("Action Successful.");
         }
         else {
             System.out.println(this.name + " needs immediate attention!");
