@@ -14,6 +14,7 @@ public class Mothership {
         this.thrusterModule = thrusterModule;
         this.experimentModule = experimentModule;
         modules = new ArrayList<IModule>();
+        modules.add(powerGenerator);
         modules.add(thrusterModule);
         modules.add(experimentModule);
     }
@@ -35,6 +36,9 @@ public class Mothership {
         for (int i = 0; i < modules.toArray().length; i++){
             modules.get(i).statusReport("Normal", true);
         }
+    }
+    public String getExperimentSummary() {
+        return experimentModule.getSummary();
     }
 
 }

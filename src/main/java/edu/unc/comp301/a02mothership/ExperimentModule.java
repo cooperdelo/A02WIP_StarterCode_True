@@ -21,6 +21,9 @@ public class ExperimentModule extends AModule{
         }
     }
     public String getSummary() {
+        if (parameters.length == 0){
+            return experimentName + " : 0";
+        }
         if (hasRun) {
             return "Experiment '" + this.experimentName + "' result: " + this.result;
         } else {
