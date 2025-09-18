@@ -10,7 +10,7 @@ public class SolarGenerator extends AModule implements IPowerGenerator {
         super.statusReport(moduleStatus, isSuccessful);
     }
 
-    public int GeneratePower(){
+    public int generatePower(){
         return 10;
     }
 

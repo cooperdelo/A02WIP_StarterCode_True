@@ -13,7 +13,7 @@ public class FuelGenerator extends AModule implements IPowerGenerator {
         super.statusReport(moduleStatus, isSuccessful);
     }
 
-    public int GeneratePower(){
+    public int generatePower(){
         if (this.fuel >= 10){
             this.fuel -= 10;
             return 10;
