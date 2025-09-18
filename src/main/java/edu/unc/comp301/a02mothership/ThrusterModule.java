@@ -22,16 +22,14 @@ public class ThrusterModule extends AModule  {
         super.statusReport(moduleStatus, isSuccessful);
     }
     public boolean thrust(int availablePower){
-        if (fuel < 5 | availablePower < 5){
+        if (this.fuel < 5 | availablePower < 5){
             this.lastFired = false;
-            super.statusReport("Warning", false);
             System.out.println("ThrusterModule: Not enough power or fuel to fire.");
             return false;
         }
         else{
             this.fuel -= 5;
             this.lastFired = true;
-            super.statusReport("Normal", true);
             System.out.println("ALERT Captain: 5 fuel used for propulsion maneuver.");
             return true;
         }
