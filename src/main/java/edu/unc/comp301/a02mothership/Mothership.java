@@ -19,7 +19,7 @@ public class Mothership {
     }
 
     public int requestPower(){
-        return powerGenerator.GeneratePower();
+        return powerGenerator.generatePower();
     }
 
     public boolean fireThruster(int availablePower){
