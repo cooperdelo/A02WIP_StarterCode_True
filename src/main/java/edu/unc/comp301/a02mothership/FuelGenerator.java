@@ -3,8 +3,8 @@ package edu.unc.comp301.a02mothership;
 public class FuelGenerator extends AModule implements IPowerGenerator {
     private int fuel;
 
-    public FuelGenerator(String name, int fuel){
-        super(name);
+    public FuelGenerator(int fuel){
+        super("Fuel Generator");
         this.fuel = fuel;
     }
 

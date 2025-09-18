@@ -1,7 +1,7 @@
 package edu.unc.comp301.a02mothership;
 
 public abstract class AModule implements IModule{
-    protected String name;
+    private String name;
 
     public AModule(String name){
         this.name = name;

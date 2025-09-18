@@ -6,18 +6,18 @@ public class ThrusterModule extends AModule  {
     private int fuel;
     private boolean lastFired = false;
 
-    public ThrusterModule(String name){
-        super(name);
+    public ThrusterModule(){
+        super("ThrusterModule");
         this.fuel = 100;
         this.lastFired = false;
     }
     @Override
     public void statusReport(String moduleStatus, boolean isSuccessful){
         if (this.lastFired == true){
-            System.out.println(this.name + ": " + this.fuel + " units of fuel remaining. Last fired: Yes");
+            System.out.println( "ThrusterModule: " + this.fuel + " units of fuel remaining. Last fired: Yes");
         }
         else{
-            System.out.println(this.name + ": " + this.fuel + " units of fuel remaining. Last fired: No");
+            System.out.println("ThrusterModule: " + this.fuel + " units of fuel remaining. Last fired: No");
         }
         super.statusReport(moduleStatus, isSuccessful);
     }

@@ -22,17 +22,17 @@ public class ExperimentModule extends AModule{
     }
     public String getSummary() {
         if (hasRun) {
-            return "Experiment " + this.experimentName + " result: " + this.result;
+            return "Experiment '" + this.experimentName + "' result: " + this.result;
         } else {
             return "Experiment not run yet.";
         }
     }
     public void statusReport(String moduleStatus, boolean isSuccessful){
         if (hasRun) {
-            System.out.println("ExperimentModule: " + this.experimentName + " completed.");
+            System.out.println(experimentName + ": " + this.experimentName + " completed.");
         }
         else{
-            System.out.println("ExperimentModule: " + this.experimentName + " pending.");
+            System.out.println(experimentName + ": " + this.experimentName + " pending.");
         }
         super.statusReport(moduleStatus, isSuccessful);
     }

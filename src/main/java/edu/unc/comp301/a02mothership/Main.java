@@ -2,8 +2,8 @@ package edu.unc.comp301.a02mothership;
 
 public class Main {
     public static void main(String[] args){
-        IPowerGenerator solarGenerator = new SolarGenerator("Solar Generator");
-        ThrusterModule thrusterMod = new ThrusterModule("Thruster Module");
+        IPowerGenerator solarGenerator = new SolarGenerator();
+        ThrusterModule thrusterMod = new ThrusterModule();
         ExperimentModule experimentMod = new ExperimentModule("exper", new double[]{2.0, 5.0, 5.5, 10.8, 22.4});
 
         Mothership ship = new Mothership(solarGenerator, thrusterMod, experimentMod);
