@@ -14,18 +14,13 @@ public class ThrusterModule extends AModule  {
     @Override
     public void statusReport(String moduleStatus, boolean isSuccessful){
         String status = "";
-        if (this.lastFired = false){
+        if (this.lastFired == false){
             status = "No";
         }
         else{
             status = "Yes";
         }
-        if (this.lastFired == true){
-            System.out.println(getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + status);
-        }
-        else{
-            System.out.println(getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + status);
-        }
+        System.out.println(getName() + ": " + this.fuel + " units of fuel remaining. Last fired: " + status);
         super.statusReport(moduleStatus, isSuccessful);
     }
     public boolean thrust(int availablePower){
