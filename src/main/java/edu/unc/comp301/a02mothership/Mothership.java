@@ -9,7 +9,7 @@ public class Mothership {
     private ExperimentModule experimentModule;
     private ArrayList<IModule> modules;
 
-    public Mothership(IPowerGenerator powerGenerator, ThrusterModule thrusterModule, ExperimentModule experimentModule){
+    public Mothership(IPowerGenerator powerGenerator, ThrusterModule thrusterModule, ExperimentModule experimentModule, AModule bigModule){
         this.powerGenerator = powerGenerator;
         this.thrusterModule = thrusterModule;
         this.experimentModule = experimentModule;

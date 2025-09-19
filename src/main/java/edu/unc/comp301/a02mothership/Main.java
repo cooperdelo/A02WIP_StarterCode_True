@@ -5,8 +5,9 @@ public class Main {
         IPowerGenerator solarGenerator = new SolarGenerator();
         ThrusterModule thrusterMod = new ThrusterModule();
         ExperimentModule experimentMod = new ExperimentModule("exper", new double[]{2.0, 5.0, 5.5, 10.8, 22.4});
+        BigModule bigModule = new BigModule();
 
-        Mothership ship = new Mothership(solarGenerator, thrusterMod, experimentMod);
+        Mothership ship = new Mothership(solarGenerator, thrusterMod, experimentMod, bigModule);
         int power = ship.requestPower();
         boolean result = ship.fireThruster(power);
         if (result == true){
